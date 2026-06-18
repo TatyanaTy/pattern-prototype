@@ -58,6 +58,13 @@ def test_clone_all_attributes():
     assert cloned.price == original.price
     assert cloned.size == original.size
     assert cloned.color == original.color
-
+    
+def test_this_will_fail():
+    """Тест 6: СПЕЦИАЛЬНО ПАДАЕТ - для демонстрации CI/CD"""
+    original = Product("Тест", "Тестовый", 100)
+    cloned = original.clone()
+    
+    # ЭТОТ ТЕСТ ВСЕГДА БУДЕТ ПАДАТЬ
+    assert original is cloned, "Демонстрационная ошибка для преподавателя"
 
 
